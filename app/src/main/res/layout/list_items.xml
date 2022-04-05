@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemViewModel"
+            type="com.android.cart.ui.pages.ItemViewModel">
+
+        </variable>
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="7dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{itemViewModel.title}"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/image"
+                imageUrl="@{itemViewModel.image}"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="10dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/image"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/oPrice"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="@{itemViewModel.oPrice}"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/oPrice"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/aPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{itemViewModel.aPrice}"
+                    android:textColor="#474747"
+                    android:textSize="14sp" />
+
+
+
+
+
+                <LinearLayout
+                    android:layout_below="@+id/aPrice"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:visibility="@{itemViewModel.showCart?View.VISIBLE:View.GONE}"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/cart_add_chage"
+                        android:weightSum="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:onClick="@{()->itemViewModel.removeItemClick()}"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="#000000"
+                            android:textSize="22sp" />
+
+
+                        <TextView
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@{itemViewModel.cartCount}"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="22sp" />
+
+
+
+                        <TextView
+                            android:onClick="@{()->itemViewModel.addItemClick()}"
+
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:textColor="#000000"
+                            android:textSize="22sp" />
+
+
+
+                    </LinearLayout>
+
+
+                    <!--<TextView
+                        android:layout_gravity="end"
+                        android:id="@+id/count"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/circle_cart"
+                        android:gravity="center"
+                        android:text="@{itemViewModel.cartCount}"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:translationZ="10dp"
+                        android:visibility="@{itemViewModel.showCart?View.VISIBLE:View.GONE}" />-->
+
+
+                     <Button
+                         android:visibility="@{itemViewModel.showCart?View.GONE:View.VISIBLE}"
+
+                         android:onClick="@{()->itemViewModel.insertItemClick()}"
+                         android:layout_marginTop="-5dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="@string/add"/>
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

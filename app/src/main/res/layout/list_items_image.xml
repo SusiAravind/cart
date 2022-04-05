@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="imageItemViewModel"
+            type="com.android.cart.ui.pages.ImageItemViewModel">
+
+        </variable>
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true">
+
+
+        <ImageView
+            android:id="@+id/image"
+            imageUrl="@{imageItemViewModel.image}"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-5dp"
+            android:background="@drawable/circle_cart"
+            android:gravity="center"
+            android:text="@{imageItemViewModel.cartCount}"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:translationZ="10dp" />
+
+
+    </RelativeLayout>
+
+</layout>

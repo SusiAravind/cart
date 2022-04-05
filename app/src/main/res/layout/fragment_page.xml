@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:visibility="@{dashboardViewModel.showCart?View.VISIBLE:View.GONE}"
+            android:onClick="@{()->dashboardViewModel.gotoCart()}"
+            android:id="@+id/cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+
+                android:id="@+id/cartImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_outline_shopping_cart_24" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_cart_item"
+                itemImageAdapter="@{dashboardViewModel.observableCartItemList}"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/cartImage"
+                tools:listitem="@layout/list_items" />
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cart"
+            android:layout_marginTop="15dp"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@drawable/bg_rounded"
+            app:queryHint="Search"
+            app:submitBackground="@drawable/bg_rounded" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_item"
+            itemAdapter="@{dashboardViewModel.observableItemList}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_bar"
+            android:layout_marginTop="15dp"
+            tools:listitem="@layout/list_items" />
+
+
+    </RelativeLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="dashboardViewModel"
+            type="com.android.cart.ui.pages.PageViewModel" />
+
+    </data>
+
+
+</layout>

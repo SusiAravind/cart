@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/drawable/bg_rounded.xml" value="0.234375" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/drawable/cart_add_chage.xml" value="0.234375" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/drawable/cart_amt_bg.xml" value="0.234375" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/drawable/cart_coupon_back.xml" value="0.234375" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/drawable/circle_cart.xml" value="0.234375" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.234375" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/layout/activity_cart.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/layout/activity_main.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/layout/fragment_page.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/layout/list_item_cart.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/layout/list_items.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Tovology/AndroidStudioProjects/interview_task2/app/src/main/res/layout/list_items_image.xml" value="0.21822916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="UnicodeBrowser">
+    <option name="fontName" value="JetBrains Mono" />
+  </component>
+</project>

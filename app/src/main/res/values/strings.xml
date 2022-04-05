@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Cart App</string>
+    <string name="cart_is_empty">Cart is empty</string>
+    <string name="cart">Cart</string>
+    <string name="work">Work</string>
+    <string name="address1">Door no.10, Sterling hang garden, 14 avenue,chennai-24</string>
+    <string name="view_detailed_bill">View Detailed Bill</string>
+    <string name="proceed_to_pay">Proceed to pay</string>
+    <string name="ordering_fo_someone_else">Ordering fo someone else?</string>
+    <string name="add_details">Add details</string>
+    <string name="offers_and_benefits">Offers and Benefits</string>
+    <string name="tip_for_hunger_saviour">Tip for hunger saviour</string>
+    <string name="rs_96_coupon_savings">\u20B9 96 Coupon savings</string>
+    <string name="slicefirst_applied">SLICEFIRST applied</string>
+    <string name="remove">Remove</string>
+    <string name="rs_96_total_savings">₹ 96 Total Savings</string>
+    <string name="with_slicefirst_coupon">with SLICEFIRST coupon</string>
+    <string name="apply">Apply</string>
+    <string name="coupon_code">Coupon code</string>
+    <string name="add">ADD</string>
+    <string name="thank_your_delivery_partner_by_leaving_them_a_tip_100">Thank your delivery partner by leaving them a tip 100%</string>
+</resources>
